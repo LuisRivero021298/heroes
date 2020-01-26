@@ -1,0 +1,17 @@
+<section class="heroes  animated fadeIn">
+    <h1 class="sub-title">Marvel and DC Heroes</h1>
+    <mat-divider></mat-divider>
+    <br>
+    <div class="alert-info" *ngIf="heroes.length === 0">
+        <span>No existe el resultado con el termino: {{ param }}</span>
+    </div>
+    <div class="heroes-container">
+        <app-hero-card 
+        	[heroe]="heroe" [i]="i" 
+        	*ngFor="let heroe of heroes; let i = index"
+        	(heroSelected)="viewHero( $event )"
+        >
+        </app-hero-card>
+    </div>
+</section>
+

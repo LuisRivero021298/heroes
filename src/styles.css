@@ -1,1 +1,212 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*-------- HEADER --------*/
+/*--- NAVBAR ---*/
+.navbar.mat-toolbar.mat-primary{
+	background-color: #121212;
+	color: #fff;
+}
+.navbar .img-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar .logo-img{
+	width: 40px;
+	height: 40px;
+}
+.navbar a{
+	text-decoration:none;
+	color: #999;
+}
+.navbar .active{
+	color: #fff;
+}
+.navbar .search-hero{
+	height: 35px;
+	width: 180px;
+	border-radius: 3px;
+	border:none;
+	padding: 1px 5px;
+}
+.navbar .example-icon, .navbar a {
+	padding: 0 14px;
+}
+.navbar .mat-stroked-button{
+  margin:0 8px;
+}
+.navbar .example-spacer {
+  flex: 1 1 auto;
+}
+/*--------- MAIN ----------*/
+/*--- HOME ---*/
+.container-home{
+	background-color: rgba(0,0,0,.05);
+	padding: 10px;
+}
+.container-home h1{
+	margin-top: 10px;
+}
+/*--- HEROES ---*/
+.heroes{
+	width: 80%;
+	margin: 0 auto;
+}
+.heroes-container{
+	width: 100%;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+	grid-template-rows: repeat(auto-fill, minmax(220px, 1fr));
+}
+.heroes-container .heroe-item{
+	max-width: 250px;
+	padding: 15px !important;
+}
+
+/*--- HEROE DETAIL ---*/
+.heroe{
+	width: 80%;
+	margin: 0 auto;
+}
+.body-heroe{
+	width: 100%;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns:320px 1fr;
+}
+.body-heroe .left {
+	grid-row-end: span 2;
+}
+
+.body-heroe .rigth {
+	grid-row-end: span 3;
+}
+
+.body-heroe .left img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.body-heroe .rigth h2{
+	Margin: 10px auto;
+}
+.body-heroe .rigth .date{
+	color: rgba(0,0,0,.45);
+}
+
+.body-heroe .rigth .heroe-casa{
+	max-width: 150px;
+	object-fit: cover;
+}
+
+
+/*--- Search ---*/
+.search-heroes{
+	width: 80%;
+	margin: 0 auto;
+}
+/*GENERAL*/
+.main-container{
+	margin: 0 auto;
+	margin-top: 15px;
+	width: 95%;
+}
+
+.center{
+	text-align: center;
+}
+
+.sub-title{
+	display: inline;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	margin: 25px auto;
+}
+
+/*BUTTONS*/
+.btn {
+	border-radius:5px;
+	border: none !important;
+	text-decoration: none;
+	background-color: #fff !important;
+	color: #121212 !important;
+	height: 25px;
+	margin: 0 auto;
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-block {
+	width: 100%;
+	padding: 0 !important;
+}
+.btn-red{
+	background-color: #ff4949 !important;
+	color: #fff !important;
+}
+.btn-green {
+	background-color: #69f0ae !important;
+	color: #fff !important;
+}
+
+.line-btn {
+	border: .8px solid #fff !important;
+	background: none !important;
+	color: #fff !important;
+}
+.line-btn-green {
+	border-color: #69f0ae !important;
+	color:#69f0ae !important;
+}
+
+.line-btn-red {
+	border-color: #ff4949 !important;
+	color:#ff4949 !important;
+}
+
+/*--- Alerts ---*/
+.alert-info{
+	margin: 0 auto;
+	background-color: rgba(255, 232, 86, 0.719);
+	color: #9b7f04;
+	border-radius: 5px;
+	height: 35px;
+	padding: 10px;
+	display:flex;
+	align-items: center;
+}
+
+/*--- Animations ---*/
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.fast {
+	-webkit-animation-duration: 0.4s;
+	animation-duration: 0.4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+}

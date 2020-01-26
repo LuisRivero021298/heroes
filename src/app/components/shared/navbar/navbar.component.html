@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="navbar">
+	<span class="img-container"><img src="assets/img/A-64.png" alt="logo" class="logo-img"></span>
+	<a [routerLink]="[ '/home' ]" routerLinkActive="active"> Home </a>
+	<a [routerLink]="[ '/heroes' ]" routerLinkActive="active"> Heroes </a>
+	<a [routerLink]="[ '/about' ]" routerLinkActive="active"> About </a>
+	<span class="example-spacer"></span>
+	<form (keydown.enter)="$event.preventDefault()" (submit)="$event.preventDefault()">
+		<input 
+			type="text" placeholder="Search" 
+			class="search-hero" 
+			#searchText 
+			(keyup.enter)="searchHero(searchText.value)"
+		>
+		<button mat-stroked-button class="line-btn line-btn-green" (click)="searchHero(searchText.value)">
+			<mat-icon  aria-hidden="false" aria-label="search icon">search</mat-icon>
+		</button>
+	</form>
+</mat-toolbar>

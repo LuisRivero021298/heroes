@@ -1,0 +1,22 @@
+<section class="search-heroes animated fadeIn">
+    <h1 class="sub-title">Heroes</h1>
+    <mat-divider></mat-divider>
+    <div class="heroes-container">
+        <mat-card class="heroe-item" *ngFor="let item of searchHeroes; let i = index">
+            <mat-card-header>
+                <mat-card-title>{{ item.nombre }}</mat-card-title>
+                <mat-card-subtitle>{{ item.casa }} Heroe</mat-card-subtitle>
+            </mat-card-header>
+            <div>
+                <img mat-card-image [src]="item.img" [alt]="item.nombre">
+            </div>
+            <mat-card-content>
+                <p>{{ item.bio }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <a  [routerLink]="[ '/heroe', i ]" 
+                class="mat-button mat-button-base btn-block btn-red">View more</a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</section>

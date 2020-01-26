@@ -1,0 +1,21 @@
+<section class="heroe animated fadeIn">
+    <div class="header-heroe">
+        <h1 class="sub-title">{{ heroe.casa }} Heroe: {{ heroe.nombre }}</h1>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="body-heroe">
+        <div class="left">
+            <img [src]="heroe.img" [alt]="heroe.nombre">
+            <a [routerLink]="[ '/heroes' ]" 
+               class="mat-button mat-button-base btn-block btn-red">Back</a>
+        </div>
+        <div class="rigth">
+            <h2 class="name-heroe">{{ heroe.nombre }}</h2>
+            <span class="date">{{ heroe.aparicion | date:'y'}}</span>
+            <mat-divider></mat-divider>
+            <p class="bio-heroe">{{ heroe.bio }}</p>
+            <img *ngIf="heroe.casa === 'DC'" src="assets/img/dc.jpg" alt="" class="heroe-casa">
+            <img *ngIf="heroe.casa === 'Marvel'" src="assets/img/marvel.png" alt="" class="heroe-casa">
+        </div>
+    </div>
+</section>

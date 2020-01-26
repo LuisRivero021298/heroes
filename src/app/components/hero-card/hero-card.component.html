@@ -1,0 +1,16 @@
+<mat-card class="heroe-item">
+    <mat-card-header>
+        <mat-card-title>{{ heroe.nombre }}</mat-card-title>
+        <mat-card-subtitle>{{ heroe.casa }} Heroe</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <img mat-card-image [src]="heroe.img" [alt]="heroe.nombre">
+    </div>
+    <mat-card-content>
+        <p>{{ heroe.bio }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a  [routerLink]="[ '/heroe', heroe._id ]" 
+        class="mat-button mat-button-base btn-block btn-red">View more</a>
+    </mat-card-actions>
+</mat-card>
